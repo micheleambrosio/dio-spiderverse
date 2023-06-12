@@ -1,0 +1,28 @@
+.title {
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.details {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 1rem 0;
+  padding: 1rem 0;
+  width: 70%;
+
+  .table {
+    td {
+      font-weight: 600;
+      padding-right: 2rem;
+    }
+
+    .label {
+      font-weight: normal;
+    }
+  }
+}

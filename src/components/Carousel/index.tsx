@@ -43,6 +43,10 @@ export default function Carousel({ heroes, activeId }: IProps) {
     setVisibleItems(visibleItems);
   }, [heroes, activeIndex]);
 
+  if (!visibleItems) {
+    return null;
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.carousel}>

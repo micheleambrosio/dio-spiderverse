@@ -30,6 +30,10 @@ export default function Carousel({ heroes, activeId }: IProps) {
     heroes.findIndex((hero) => hero.id === activeId) - 1
   );
 
+  // Armazena a posição inicial, no eixo x, da interação com o carrossel
+  const [startInteractionPosition, setStartInteractionPosition] =
+    useState<number>(0);
+
   // Som de transição
   const transitionAudio = useMemo(() => new Audio("/songs/transition.mp3"), []);
 
@@ -107,6 +111,49 @@ export default function Carousel({ heroes, activeId }: IProps) {
     setActiveIndex((prevActiveIndex) => prevActiveIndex + newDirection);
   };
 
+  // onDragStart (mouse): armazena a posição inicial da interação
+  const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
+    setStartInteractionPosition(e.clientX);
+  };
+
+  // onDragEnd (mouse): armazena a posição final da interação
+  // Mexe o carrossel na direção que o usuário fez o evento de interação
+  const handleDragEnd = (e: React.DragEvent<HTMLDivElement>) => {
+    if (!startInteractionPosition) {
+      return null;
+    }
+
+    const endInteractionPosition = e.clientX;
+    const diffPosition = endInteractionPosition - startInteractionPosition;
+
+    // diffPosition > 0 => direita para esquerda
+    // diffPosition < 0 => esquerda para direita
+    const newPosition = diffPosition > 0 ? -1 : 1;
+    handleChangeActiveIndex(newPosition);
+  };
+
+  // onTouchStart (touch): armazena a posição inicial da interação
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setStartInteractionPosition(e.touches[0].clientX);
+  };
+
+  // onTouchEnd (touch): armazena a posição final da interação
+  // Mexe o carrossel na direção que o usuário fez o evento de interação
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!startInteractionPosition) {
+      return null;
+    }
+
+    const endInteractionPosition = e.changedTouches[0].clientX;
+
+    // diffPosition > 0 => direita para esquerda
+    // diffPosition < 0 => esquerda para direita
+    const diffPosition = endInteractionPosition - startInteractionPosition;
+
+    const newPosition = diffPosition > 0 ? -1 : 1;
+    handleChangeActiveIndex(newPosition);
+  };
+
   if (!visibleItems) {
     return null;
   }
@@ -116,7 +163,10 @@ export default function Carousel({ heroes, activeId }: IProps) {
       <div className={styles.carousel}>
         <div
           className={styles.wrapper}
-          onClick={() => handleChangeActiveIndex(1)}
+          onDragStart={handleDragStart}
+          onDragEnd={handleDragEnd}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
         >
           <AnimatePresence mode="popLayout">
             {visibleItems?.map((item, position) => (

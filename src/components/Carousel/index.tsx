@@ -76,7 +76,7 @@ export default function Carousel({ heroes, activeId }: IProps) {
     }
 
     const currentHeroId = visibleItems[1].id;
-    htmlEl.style.background = `url("/spiders/${currentHeroId}-background.png")`;
+    htmlEl.style.backgroundImage = `url("/spiders/${currentHeroId}-background.png")`;
     htmlEl.classList.add("hero-page");
 
     // remove a classe quando o componente é desmontado

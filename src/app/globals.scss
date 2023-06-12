@@ -3,6 +3,7 @@
 :root {
   height: 100vh;
   transition: background 1s ease-in-out;
+  background-size: cover;
 
   &:not(.hero-page)::before {
     content: "";

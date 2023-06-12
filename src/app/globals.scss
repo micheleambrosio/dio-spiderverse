@@ -1,0 +1,32 @@
+@import "./variables.scss";
+
+:root {
+  height: 100vh;
+  transition: background 1s ease-in-out;
+
+  &::before {
+    content: "";
+    background: $background;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+body {
+  color: $text-color;
+  height: calc(100vh - 3.5rem);
+  margin: auto;
+  max-width: $max-width;
+  overflow: hidden;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 3rem 0;
+  position: relative;
+  z-index: 4;
+}

@@ -27,7 +27,7 @@ export default function Carousel({ heroes, activeId }: IProps) {
 
   // Armazena o item ativo do carrossel
   const [activeIndex, setActiveIndex] = useState(
-    heroes.findIndex((hero) => hero.id === activeId)
+    heroes.findIndex((hero) => hero.id === activeId) - 1
   );
 
   // Altera o visibleItems sempre que o activeIndex é alterado

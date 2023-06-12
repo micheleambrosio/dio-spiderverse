@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 import HeroDetails from "../HeroDetails";
 import HeroPicture from "../HeroPicture";
@@ -8,6 +9,12 @@ import HeroPicture from "../HeroPicture";
 import styles from "./carousel.module.scss";
 
 import { IHeroData } from "@/interfaces/heroes";
+
+enum enPosition {
+  FRONT = 0,
+  MIDDLE = 1,
+  BACK = 2,
+}
 
 interface IProps {
   heroes: IHeroData[];
@@ -61,11 +68,28 @@ export default function Carousel({ heroes, activeId }: IProps) {
           className={styles.wrapper}
           onClick={() => handleChangeActiveIndex(1)}
         >
-          {visibleItems?.map((item) => (
-            <div key={item.id} className={styles.hero}>
-              <HeroPicture hero={item} />
-            </div>
-          ))}
+          <AnimatePresence mode="popLayout">
+            {visibleItems?.map((item, position) => (
+              <motion.div
+                key={item.id}
+                className={styles.hero}
+                transition={{ duration: 0.8 }}
+                initial={{
+                  x: -1500,
+                  scale: 0.75,
+                }}
+                animate={{ x: 0, ...getItemStyles(position) }}
+                exit={{
+                  x: 0,
+                  left: "-20%",
+                  opacity: 0,
+                  scale: 1,
+                }}
+              >
+                <HeroPicture hero={item} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
       </div>
       <div className={styles.details}>
@@ -74,3 +98,33 @@ export default function Carousel({ heroes, activeId }: IProps) {
     </div>
   );
 }
+
+// estilos para o item que está visível na animação
+// dependendo da posição do herói no carrossel
+const getItemStyles = (position: enPosition) => {
+  if (position === enPosition.FRONT) {
+    return {
+      filter: "blur(10px)",
+      scale: 1.2,
+      zIndex: 3,
+    };
+  }
+
+  if (position === enPosition.MIDDLE) {
+    return {
+      left: 300,
+      scale: 0.8,
+      top: "-10%",
+      zIndex: 2,
+    };
+  }
+
+  return {
+    filter: "blur(10px)",
+    scale: 0.6,
+    left: 160,
+    opacity: 0.8,
+    zIndex: 1,
+    top: "-20%",
+  };
+};

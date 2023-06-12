@@ -24,3 +24,17 @@
   position: relative;
   flex: 1;
 }
+
+.hero {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 500px;
+
+  img {
+    height: 100%;
+    object-fit: contain;
+    object-position: center right;
+    width: 100%;
+  }
+}

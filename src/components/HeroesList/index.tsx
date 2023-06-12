@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import HeroPicture from "../HeroPicture";
 
 import styles from "./heroesList.module.scss";
@@ -21,7 +23,9 @@ export default function HeroesList({ heroes }: IProps) {
             key={hero.id}
             className={`${styles.imageContainer} ${styles[hero.id]}`}
           >
-            <HeroPicture hero={hero} />
+            <Link href={`/hero/${hero.id}`}>
+              <HeroPicture hero={hero} />
+            </Link>
           </div>
         ))}
       </section>

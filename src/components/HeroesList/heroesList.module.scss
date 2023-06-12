@@ -1,5 +1,60 @@
 @import "@/app/variables.scss";
 
+.heroes {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  max-width: calc($max-width - 700px);
+  position: absolute;
+  top: 40%;
+  width: 100%;
+
+  @media screen and (min-width: $max-width) {
+    max-width: calc($max-width - 400px);
+    top: 50%;
+  }
+}
+
+.imageContainer {
+  cursor: pointer;
+  position: relative;
+
+  img {
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+    width: 100%;
+  }
+
+  &.spider-man-616 {
+    height: $spider-man-616-height;
+  }
+
+  &.mulher-aranha-65 {
+    height: $mulher-aranha-65-height;
+  }
+
+  &.spider-man-1610 {
+    height: $spider-man-1610-height;
+  }
+
+  &.sp-dr-14512 {
+    height: $sp-dr-14512-height;
+  }
+
+  &.spider-ham-8311 {
+    height: $spider-ham-8311-height;
+  }
+
+  &.spider-man-90214 {
+    height: $spider-man-90214-height;
+  }
+
+  &.spider-man-928 {
+    height: $spider-man-928-height;
+  }
+}
+
 .title {
   font-size: 26vw;
   margin: 0;

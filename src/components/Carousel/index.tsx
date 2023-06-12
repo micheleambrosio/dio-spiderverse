@@ -116,7 +116,7 @@ export default function Carousel({ heroes, activeId }: IProps) {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 2 }}
       >
-        <HeroDetails data={heroes[0]} />
+        <HeroDetails data={visibleItems[enPosition.MIDDLE]} />
       </motion.div>
     </div>
   );

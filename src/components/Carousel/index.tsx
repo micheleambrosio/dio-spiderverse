@@ -43,6 +43,13 @@ export default function Carousel({ heroes, activeId }: IProps) {
     setVisibleItems(visibleItems);
   }, [heroes, activeIndex]);
 
+  // Altera herói ativo no carrossel
+  // +1 rotaciona no sentido horário
+  // -1 rotaciona no sentido anti-horário
+  const handleChangeActiveIndex = (newDirection: number) => {
+    setActiveIndex((prevActiveIndex) => prevActiveIndex + newDirection);
+  };
+
   if (!visibleItems) {
     return null;
   }
@@ -50,7 +57,10 @@ export default function Carousel({ heroes, activeId }: IProps) {
   return (
     <div className={styles.container}>
       <div className={styles.carousel}>
-        <div className={styles.wrapper}>
+        <div
+          className={styles.wrapper}
+          onClick={() => handleChangeActiveIndex(1)}
+        >
           {visibleItems?.map((item) => (
             <div key={item.id} className={styles.hero}>
               <HeroPicture hero={item} />

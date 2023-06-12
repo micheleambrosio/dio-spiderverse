@@ -1,3 +1,6 @@
+import styles from "./heroesList.module.scss";
+
+import { spidermanFont } from "@/fonts";
 import { IHeroData } from "@/interfaces/heroes";
 
 interface IProps {
@@ -7,7 +10,9 @@ interface IProps {
 export default function HeroesList({ heroes }: IProps) {
   return (
     <>
-      <h1>Personagens</h1>
+      <h1 className={`${spidermanFont.className} ${styles.title}`}>
+        Personagens
+      </h1>
     </>
   );
 }

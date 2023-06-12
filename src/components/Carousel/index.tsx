@@ -50,6 +50,24 @@ export default function Carousel({ heroes, activeId }: IProps) {
     setVisibleItems(visibleItems);
   }, [heroes, activeIndex]);
 
+  // Altera o fundo da página de acordo com o herói selecionado
+  useEffect(() => {
+    const htmlEl = document.querySelector("html");
+
+    if (!htmlEl || !visibleItems) {
+      return;
+    }
+
+    const currentHeroId = visibleItems[1].id;
+    htmlEl.style.background = `url("/spiders/${currentHeroId}-background.png")`;
+    htmlEl.classList.add("hero-page");
+
+    // remove a classe quando o componente é desmontado
+    return () => {
+      htmlEl.classList.remove("hero-page");
+    };
+  }, [visibleItems]);
+
   // Altera herói ativo no carrossel
   // +1 rotaciona no sentido horário
   // -1 rotaciona no sentido anti-horário
@@ -92,15 +110,20 @@ export default function Carousel({ heroes, activeId }: IProps) {
           </AnimatePresence>
         </div>
       </div>
-      <div className={styles.details}>
+      <motion.div
+        className={styles.details}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 2 }}
+      >
         <HeroDetails data={heroes[0]} />
-      </div>
+      </motion.div>
     </div>
   );
 }
 
-// estilos para o item que está visível na animação
-// dependendo da posição do herói no carrossel
+// Estilos para o item que está visível na animação
+// Dependendo da posição do herói no carrossel
 const getItemStyles = (position: enPosition) => {
   if (position === enPosition.FRONT) {
     return {

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "spider-man-616",
+    "name": "Homem-Aranha",
+    "universe": 616,
+    "details": {
+      "fullName": "Peter B. Parker",
+      "birthday": "1980-08-27",
+      "homeland": "Queens, Nova Iorque",
+      "height": 1.78,
+      "weight": 75.75
+    }
+  },
+  {
+    "id": "mulher-aranha-65",
+    "name": "Mulher-Aranha",
+    "universe": 65,
+    "details": {
+      "fullName": "Gwen Stacy",
+      "birthday": "2002-03-02",
+      "homeland": "Manhattan, Nova York",
+      "height": 1.65,
+      "weight": 56.7
+    }
+  },
+  {
+    "id": "spider-man-1610",
+    "name": "Homem-Aranha II",
+    "universe": 1610,
+    "details": {
+      "fullName": "Miles Morales",
+      "birthday": "1999-08-03",
+      "homeland": "Brooklyn, Nova York",
+      "height": 1.73,
+      "weight": 72.5
+    }
+  },
+  {
+    "id": "sp-dr-14512",
+    "name": "SP//DR",
+    "universe": 14512,
+    "details": {
+      "fullName": "Peni Parker",
+      "birthday": "2009-10-22",
+      "homeland": "New York City, Nova York",
+      "height": 1.50,
+      "weight": 47.6
+    }
+  },
+  {
+    "id": "spider-ham-8311",
+    "name": "Porco-Aranha",
+    "universe": 8311,
+    "details": {
+      "fullName": "Peter Porker",
+      "birthday": null,
+      "homeland": "Queens, Nova York",
+      "height": 1.57,
+      "weight": 43.9
+    }
+  },
+  {
+    "id": "spider-man-90214",
+    "name": "Homem-Aranha Noir",
+    "universe": 90214,
+    "details": {
+      "fullName": "Peter Parker",
+      "birthday": "1933-02-09",
+      "homeland": "Queens, Nova York",
+      "height": 1.78,
+      "weight": 79
+    }
+  },
+  {
+    "id": "spider-man-928",
+    "name": "Homem-Aranha",
+    "universe": 928,
+    "details": {
+      "fullName": "Miguel O'hara",
+      "birthday": "1970-05-11",
+      "homeland": "Nueva York",
+      "height": 1.78,
+      "weight": 77.1
+    }
+  }
+]

@@ -1,4 +1,4 @@
-![localhost_3000_ (1)](https://github.com/micheleambrosio/dio-spiderverse/assets/55519539/91f0948e-f034-4224-a94d-85fa92723574)
+![Cover (1)](https://github.com/micheleambrosio/dio-spiderverse/assets/55519539/a126075c-0dd7-4e7b-820c-7416d2d76496)
 
 # Projeto Spider-Verse
 

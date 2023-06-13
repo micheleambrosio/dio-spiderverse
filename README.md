@@ -1,3 +1,5 @@
+![localhost_3000_ (1)](https://github.com/micheleambrosio/dio-spiderverse/assets/55519539/91f0948e-f034-4224-a94d-85fa92723574)
+
 # Projeto Spider-Verse
 
 Este é o repositório do projeto Spider-Verse, desenvolvido durante uma live no Youtube em parceria com a [DIO](https://dio.me). O projeto consiste em uma aplicação interativa inspirada no universo do Homem-Aranha, usando as principais stacks front-end: React, Next.js 13, a biblioteca Framer Motion, Sass e TypeScript para criar um projeto visual incrível e de alta performance.

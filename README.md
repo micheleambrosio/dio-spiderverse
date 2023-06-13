@@ -1,4 +1,4 @@
-![Cover (1)](https://github.com/micheleambrosio/dio-spiderverse/assets/55519539/a126075c-0dd7-4e7b-820c-7416d2d76496)
+![Cover (2)](https://github.com/micheleambrosio/dio-spiderverse/assets/55519539/2247f062-26e9-4881-a9c8-0fcb17206daa)
 
 # Projeto Spider-Verse
 

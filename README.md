@@ -20,6 +20,7 @@ Este é o repositório do projeto Spider-Verse, desenvolvido durante uma live no
 - [Link da live no Youtube](https://www.youtube.com/watch?v=d5HVw12uOpk)
 - [Material de apoio com tutorial completo](https://micheleambrosio.notion.site/Live-Criando-um-carrossel-parallax-do-Aranhaverso-com-React-Next-js-13-e-Framer-Motion-67a818e32c2049d39d28ce4a185555c4?pvs=4)
 - [Assets](https://drive.google.com/drive/folders/150O6eEhs8oGaHMMss7_CYG2jnI7yMugO?usp=sharing) (arquivos de imagens e efeitos sonoros)
+- [Protótipo no Figma](https://www.figma.com/file/IetSHOYUJVQ5LPqkNTMP6l/Landpage-%2B-Mobile---SpiderVerse-(TestBoard-L%C3%A9o)?type=design&node-id=4%3A115619&mode=design&t=ndcD4XhBAoR3AVKb-1)
 
 ## 🌿 Branches
 

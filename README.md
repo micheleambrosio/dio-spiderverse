@@ -30,7 +30,7 @@ Este é o repositório do projeto Spider-Verse, desenvolvido durante uma live no
 
 ## 🎨 Protótipo do projeto
 
-[Clique aqui](https://www.figma.com/file/tdCIzlGKVdZJmKSaV99iDU/Landpage---SpiderVerse?type=design&node-id=0%3A1&t=rZMG8Ic2KXC3Dwfn-1) para ir ao protótipo do projeto no Figma.
+[Clique aqui](https://www.figma.com/file/rgHS7o5MyTAxk9vCRH5YhL/Landpage-%2B-Mobile---SpiderVerse?type=design&node-id=0%3A1&mode=design&t=5SFRyEJyIbhD90Sl-1) para ir ao protótipo do projeto no Figma.
 
 ## 🗄️ Estrutura de pastas
 
@@ -94,7 +94,7 @@ Se deseja alterar a porta padrão na qual a aplicação tentará subir, você po
 Agora você está pronto para explorar o projeto em seu ambiente local!
 
 ## 📚 Tutorial do projeto
-[Live Criando um carrossel parallax do Aranhaverso.pdf](https://github.com/micheleambrosio/dio-spiderverse/files/12097860/Live.Criando.um.carrossel.parallax.do.Aranhaverso.67a818e32c2049d39d28ce4a185555c4.pdf)
+[Live Criando um carrossel parallax do Aranhaverso.pdf](https://github.com/digitalinnovationone/spiderverse/files/12098974/Live.Criando.um.carrossel.parallax.do.Aranhaverso.67a818e32c2049d39d28ce4a185555c4.pdf)
 
 ## 👩‍💻 Autora
 

@@ -22,7 +22,6 @@ export default function RootLayout({
             alt="Menu options"
             width={36}
             height={25}
-            priority
           />
           <Link href="/">
             <Image
@@ -30,16 +29,9 @@ export default function RootLayout({
               alt="Spiderman"
               width={260}
               height={70}
-              priority
             />
           </Link>
-          <Image
-            src="/icons/user.svg"
-            alt="Login"
-            width={36}
-            height={36}
-            priority
-          />
+          <Image src="/icons/user.svg" alt="Login" width={36} height={36} />
         </header>
         {children}
       </body>

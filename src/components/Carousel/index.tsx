@@ -54,16 +54,16 @@ export default function Carousel({ heroes, activeId }: IProps) {
   // Altera o visibleItems sempre que o activeIndex é alterado
   useEffect(() => {
     // itens que serão mostrados ao longo do carrossel
-    const items = [...heroes];
+    // const items = [...heroes];
 
     // calcula o índice do array de acordo com o item ativo
     // de forma que o número nunca saia do escopo do array
     const indexInArrayScope =
-      ((activeIndex % items.length) + items.length) % items.length;
+      ((activeIndex % heroes.length) + heroes.length) % heroes.length;
 
     // itens que estão visíveis neste momento para o usuário
     // duplicamos o array para dar a impressão de um carrossel infinito (360deg)
-    const visibleItems = [...items, ...items].slice(
+    const visibleItems = [...heroes, ...heroes].slice(
       indexInArrayScope,
       indexInArrayScope + 3
     );
@@ -123,13 +123,7 @@ export default function Carousel({ heroes, activeId }: IProps) {
       return null;
     }
 
-    const endInteractionPosition = e.clientX;
-    const diffPosition = endInteractionPosition - startInteractionPosition;
-
-    // diffPosition > 0 => direita para esquerda
-    // diffPosition < 0 => esquerda para direita
-    const newPosition = diffPosition > 0 ? -1 : 1;
-    handleChangeActiveIndex(newPosition);
+    rotateCarousel(e.clientX);
   };
 
   // onTouchStart (touch): armazena a posição inicial da interação
@@ -144,7 +138,11 @@ export default function Carousel({ heroes, activeId }: IProps) {
       return null;
     }
 
-    const endInteractionPosition = e.changedTouches[0].clientX;
+    rotateCarousel(e.changedTouches[0].clientX);
+  };
+
+  const rotateCarousel = (clientX: number) => {
+    const endInteractionPosition = clientX;
 
     // diffPosition > 0 => direita para esquerda
     // diffPosition < 0 => esquerda para direita
